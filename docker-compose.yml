@@ -1,0 +1,27 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    image: slim3-docker
+    ports:
+      - 8080:80
+    volumes:
+      - .:/srv/app
+    links:
+      - mysql
+    environment:
+      DB_HOST: mysql
+      DB_NAME: slim
+      DB_USER: slim
+      DB_PASS: slim
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 13306:3306
+    environment:
+      MYSQL_DATABASE: slim
+      MYSQL_USER: slim
+      MYSQL_PASSWORD: slim
+      MYSQL_ROOT_PASSWORD: password
