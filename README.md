@@ -4,20 +4,18 @@ This is a simple skeleton project for Slim 3 that includes Twig, Flash messages 
 
 ## Create your project:
 
-    $ composer create-project --no-interaction --stability=dev akrabat/slim3-skeleton my-app
+    $ composer create-project --no-interaction --stability=dev luxiconn/slim3-skeleton my-app
 
 ### Run it:
 
 1. `$ cd my-app`
-2. `$ php -S 0.0.0.0:8888 -t public public/index.php`
+2. `$ docker-compose up --build`
 3. Browse to http://localhost:8888
 
 ## Key directories
 
 * `app`: Application code
 * `app/src`: All class files within the `App` namespace
-* `app/templates`: Twig template files
-* `cache/twig`: Twig's Autocreated cache files
 * `log`: Log files
 * `public`: Webserver root
 * `vendor`: Composer dependencies
@@ -30,4 +28,3 @@ This is a simple skeleton project for Slim 3 that includes Twig, Flash messages 
 * `app/middleware.php`: Application middleware
 * `app/routes.php`: All application routes are here
 * `app/src/Action/HomeAction.php`: Action class for the home page
-* `app/templates/home.twig`: Twig template file for the home page

@@ -15,7 +15,6 @@
     },
     "require": {
         "slim/slim": "^3.0",
-        "slim/flash": "^0.1.0",
         "monolog/monolog": "^1.13",
         "illuminate/database": "^5.6"
     }
